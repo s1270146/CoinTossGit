@@ -6,6 +6,12 @@
 
 int main(){
   int i,cnt=0;
+  char str[20];
+
+  printf("Who are you?\n> ");
+  scanf("%s",str);
+  printf("Hello,%s!\n", str);
+
   printf("Tossing a coin...\n");
   for(i=0;i<N;i++){
     srand((unsigned int)time(NULL));
@@ -20,6 +26,13 @@ int main(){
     sleep(1);
   }
   printf("Heads:%d,Tails:%d\n",cnt,3-cnt);
+
+  if(cnt > 1){
+    printf("%s won!\n", str);
+  }
+  else {
+    printf("%s lost!\n", str);
+  }
 
   return 0;
 }
